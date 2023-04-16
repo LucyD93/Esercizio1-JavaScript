@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+    </div>
+
+</body>
+
+<script>
+    const tag = prompt('Inserisci un valore\np,h,hr o table');
+    const number = prompt('Inserisci un numero');
+
+
+    if (tag != 'p' && tag != 'h' && tag != 'hr' && tag != 'table' ) {
+
+
+    } else {
+        for (let i = 1; i <= number; i++) {
+            if (tag == 'p') {
+                document.getElementById('wrapper').innerHTML += `<p>${i}</p>`;
+            } else if (tag == 'h') {
+                document.getElementById('wrapper').innerHTML += `<h3>${i}</h3>`;
+            } else if (tag == 'hr') {
+                document.getElementById('wrapper').innerHTML += `${i}<hr>`;
+            } else if (tag == 'table') {
+                document.getElementById('wrapper').innerHTML += `
+            <table>
+            <tr>
+            <th>Indice</th>
+            </tr>
+            <tr>
+            <td>${i}</td>
+            </tr>
+        </table>`;
+            }
+        }
+    }
+</script>
+
+</html>
